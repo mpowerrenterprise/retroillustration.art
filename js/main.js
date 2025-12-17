@@ -488,6 +488,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* -------------------------------------------
 
+    scale animation for dodecahedron (mil-scale)
+    ------------------------------------------- */
+    const scaleAnimation = document.querySelectorAll(".mil-scale");
+
+    scaleAnimation.forEach((section) => {
+        var value1 = section.getAttribute("data-value-1");
+        var value2 = section.getAttribute("data-value-2");
+
+        if (value1 && value2) {
+            gsap.fromTo(section, {
+                ease: 'sine',
+                scale: value1,
+            }, {
+                scale: value2,
+                scrollTrigger: {
+                    trigger: section.closest('.mil-hero-4') || section,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                    toggleActions: 'play none none reverse',
+                }
+            });
+        }
+    });
+
+    /* -------------------------------------------
+
     rotate animation
 
     ------------------------------------------- */
@@ -993,6 +1020,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
+
         /* -------------------------------------------
 
         add class
@@ -1109,4 +1137,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+});
+
+/* -------------------------------------------
+
+clone dodecahedron animation
+------------------------------------------- */
+
+// Clone dodecahedron into each animation div (matching guide implementation)
+$(document).ready(function () {
+    $(".mil-dodecahedron").clone().appendTo(".mil-animation");
 });

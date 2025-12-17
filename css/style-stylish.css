@@ -1984,6 +1984,8 @@ hero 4
 .mil-hero-4 {
   height: 100vh;
   position: relative;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }
 .mil-hero-4 .mil-hero-scene {
   position: absolute;
@@ -5189,4 +5191,403 @@ footer
 }
 .mil-subscribe-form button i {
   font-size: 24px;
+}
+
+/* -------------------------------------------
+
+tesseract animation
+
+------------------------------------------- */
+
+.mil-hidden-elements {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.mil-animation-frame {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  -webkit-animation: jump 10s linear infinite;
+  animation: jump 10s linear infinite;
+  pointer-events: none;
+}
+
+.mil-animation {
+  position: absolute;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.mil-position-1 {
+  top: 100px;
+  right: 100px;
+  width: 120px;
+  height: 120px;
+}
+
+.mil-position-1 .mil-dodecahedron {
+  left: 40px;
+  top: 16px;
+  width: 40px;
+  height: 89.2px;
+}
+
+.mil-position-1 .mil-pentagon {
+  width: 40px;
+}
+
+.mil-position-1 .mil-pentagon div {
+  width: 40px;
+  height: 27.6px;
+  border-top: 0.1px solid rgba(210, 210, 208, 0.8);
+}
+
+.mil-position-1 .mil-pentagon:nth-child(1) {
+  -webkit-transform: rotateY(0.2turn) translateZ(27.6px) rotateX(26.5deg);
+  transform: rotateY(0.2turn) translateZ(27.6px) rotateX(26.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(6) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.2turn) translateZ(-27.6px) rotateX(206.5deg);
+  transform: rotateY(0.2turn) translateZ(-27.6px) rotateX(206.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(2) {
+  -webkit-transform: rotateY(0.4turn) translateZ(27.6px) rotateX(26.5deg);
+  transform: rotateY(0.4turn) translateZ(27.6px) rotateX(26.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(7) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.4turn) translateZ(-27.6px) rotateX(206.5deg);
+  transform: rotateY(0.4turn) translateZ(-27.6px) rotateX(206.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(3) {
+  -webkit-transform: rotateY(0.6turn) translateZ(27.6px) rotateX(26.5deg);
+  transform: rotateY(0.6turn) translateZ(27.6px) rotateX(26.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(8) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.6turn) translateZ(-27.6px) rotateX(206.5deg);
+  transform: rotateY(0.6turn) translateZ(-27.6px) rotateX(206.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(4) {
+  -webkit-transform: rotateY(0.8turn) translateZ(27.6px) rotateX(26.5deg);
+  transform: rotateY(0.8turn) translateZ(27.6px) rotateX(26.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(9) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.8turn) translateZ(-27.6px) rotateX(206.5deg);
+  transform: rotateY(0.8turn) translateZ(-27.6px) rotateX(206.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(5) {
+  -webkit-transform: rotateY(1turn) translateZ(27.6px) rotateX(26.5deg);
+  transform: rotateY(1turn) translateZ(27.6px) rotateX(26.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(10) {
+  bottom: 0;
+  -webkit-transform: rotateY(1turn) translateZ(-27.6px) rotateX(206.5deg);
+  transform: rotateY(1turn) translateZ(-27.6px) rotateX(206.5deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(11) {
+  -webkit-transform: translateZ(27.6px) rotateX(-90deg);
+  transform: translateZ(27.6px) rotateX(-90deg);
+}
+.mil-position-1 .mil-pentagon:nth-child(12) {
+  bottom: 0;
+  -webkit-transform: translateZ(-27.6px) rotateX(90deg);
+  transform: translateZ(-27.6px) rotateX(90deg);
+}
+
+.mil-position-2 {
+  top: -60px;
+  left: 15%;
+  width: 90px;
+  height: 90px;
+}
+
+.mil-position-2 .mil-dodecahedron {
+  left: 30px;
+  top: 12px;
+  width: 30px;
+  height: 66.9px;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.mil-position-2 .mil-pentagon {
+  width: 30px;
+}
+
+.mil-position-2 .mil-pentagon div {
+  width: 30px;
+  height: 20.7px;
+  border-top: 1px solid rgba(210, 210, 208, 0.8);
+}
+
+@media screen and (max-width: 1400px) {
+  .mil-position-2 {
+    display: none;
+  }
+}
+
+.mil-position-3 {
+  bottom: -80px;
+  right: 35%;
+  width: 60px;
+  height: 60px;
+}
+
+.mil-position-3 .mil-dodecahedron {
+  left: 20px;
+  top: 8px;
+  width: 20px;
+  height: 44.6px;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.mil-position-3 .mil-pentagon {
+  width: 20px;
+}
+
+.mil-position-3 .mil-pentagon div {
+  width: 20px;
+  height: 13.8px;
+  border-top: 1px solid rgba(210, 210, 208, 0.8);
+}
+
+.mil-position-3 .mil-pentagon:nth-child(1) {
+  -webkit-transform: rotateY(0.2turn) translateZ(13.8px) rotateX(26.5deg);
+  transform: rotateY(0.2turn) translateZ(13.8px) rotateX(26.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(6) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.2turn) translateZ(-13.8px) rotateX(206.5deg);
+  transform: rotateY(0.2turn) translateZ(-13.8px) rotateX(206.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(2) {
+  -webkit-transform: rotateY(0.4turn) translateZ(13.8px) rotateX(26.5deg);
+  transform: rotateY(0.4turn) translateZ(13.8px) rotateX(26.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(7) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.4turn) translateZ(-13.8px) rotateX(206.5deg);
+  transform: rotateY(0.4turn) translateZ(-13.8px) rotateX(206.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(3) {
+  -webkit-transform: rotateY(0.6turn) translateZ(13.8px) rotateX(26.5deg);
+  transform: rotateY(0.6turn) translateZ(13.8px) rotateX(26.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(8) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.6turn) translateZ(-13.8px) rotateX(206.5deg);
+  transform: rotateY(0.6turn) translateZ(-13.8px) rotateX(206.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(4) {
+  -webkit-transform: rotateY(0.8turn) translateZ(13.8px) rotateX(26.5deg);
+  transform: rotateY(0.8turn) translateZ(13.8px) rotateX(26.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(9) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.8turn) translateZ(-13.8px) rotateX(206.5deg);
+  transform: rotateY(0.8turn) translateZ(-13.8px) rotateX(206.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(5) {
+  -webkit-transform: rotateY(1turn) translateZ(13.8px) rotateX(26.5deg);
+  transform: rotateY(1turn) translateZ(13.8px) rotateX(26.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(10) {
+  bottom: 0;
+  -webkit-transform: rotateY(1turn) translateZ(-13.8px) rotateX(206.5deg);
+  transform: rotateY(1turn) translateZ(-13.8px) rotateX(206.5deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(11) {
+  -webkit-transform: translateZ(13.8px) rotateX(-90deg);
+  transform: translateZ(13.8px) rotateX(-90deg);
+}
+.mil-position-3 .mil-pentagon:nth-child(12) {
+  bottom: 0;
+  -webkit-transform: translateZ(-13.8px) rotateX(90deg);
+  transform: translateZ(-13.8px) rotateX(90deg);
+}
+
+@media screen and (max-width: 1400px) {
+  .mil-position-3 {
+    display: none;
+  }
+}
+
+.mil-dodecahedron {
+  position: relative;
+  left: 25px;
+  top: 10px;
+  width: 25px;
+  height: 55.75px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-animation: rotate-dodeca 100s infinite linear;
+  animation: rotate-dodeca 100s infinite linear;
+}
+
+@-webkit-keyframes rotate-dodeca {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-360deg);
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes rotate-dodeca {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-360deg);
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(-360deg);
+  }
+}
+
+.mil-pentagon {
+  position: absolute;
+  width: 25px;
+}
+
+.mil-pentagon:nth-child(1) {
+  -webkit-transform: rotateY(0.2turn) translateZ(17.25px) rotateX(26.5deg);
+  transform: rotateY(0.2turn) translateZ(17.25px) rotateX(26.5deg);
+}
+
+.mil-pentagon:nth-child(6) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.2turn) translateZ(-17.25px) rotateX(206.5deg);
+  transform: rotateY(0.2turn) translateZ(-17.25px) rotateX(206.5deg);
+}
+
+.mil-pentagon:nth-child(2) {
+  -webkit-transform: rotateY(0.4turn) translateZ(17.25px) rotateX(26.5deg);
+  transform: rotateY(0.4turn) translateZ(17.25px) rotateX(26.5deg);
+}
+
+.mil-pentagon:nth-child(7) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.4turn) translateZ(-17.25px) rotateX(206.5deg);
+  transform: rotateY(0.4turn) translateZ(-17.25px) rotateX(206.5deg);
+}
+
+.mil-pentagon:nth-child(3) {
+  -webkit-transform: rotateY(0.6turn) translateZ(17.25px) rotateX(26.5deg);
+  transform: rotateY(0.6turn) translateZ(17.25px) rotateX(26.5deg);
+}
+
+.mil-pentagon:nth-child(8) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.6turn) translateZ(-17.25px) rotateX(206.5deg);
+  transform: rotateY(0.6turn) translateZ(-17.25px) rotateX(206.5deg);
+}
+
+.mil-pentagon:nth-child(4) {
+  -webkit-transform: rotateY(0.8turn) translateZ(17.25px) rotateX(26.5deg);
+  transform: rotateY(0.8turn) translateZ(17.25px) rotateX(26.5deg);
+}
+
+.mil-pentagon:nth-child(9) {
+  bottom: 0;
+  -webkit-transform: rotateY(0.8turn) translateZ(-17.25px) rotateX(206.5deg);
+  transform: rotateY(0.8turn) translateZ(-17.25px) rotateX(206.5deg);
+}
+
+.mil-pentagon:nth-child(5) {
+  -webkit-transform: rotateY(1turn) translateZ(17.25px) rotateX(26.5deg);
+  transform: rotateY(1turn) translateZ(17.25px) rotateX(26.5deg);
+}
+
+.mil-pentagon:nth-child(10) {
+  bottom: 0;
+  -webkit-transform: rotateY(1turn) translateZ(-17.25px) rotateX(206.5deg);
+  transform: rotateY(1turn) translateZ(-17.25px) rotateX(206.5deg);
+}
+
+.mil-pentagon:nth-child(11) {
+  -webkit-transform: translateZ(17.25px) rotateX(-90deg);
+  transform: translateZ(17.25px) rotateX(-90deg);
+}
+
+.mil-pentagon:nth-child(12) {
+  bottom: 0;
+  -webkit-transform: translateZ(-17.25px) rotateX(90deg);
+  transform: translateZ(-17.25px) rotateX(90deg);
+}
+
+.mil-pentagon div {
+  position: absolute;
+  width: 25px;
+  height: 17.25px;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+
+.mil-pentagon div:nth-child(1) {
+  -webkit-transform: rotate(0.2turn);
+  transform: rotate(0.2turn);
+}
+
+.mil-pentagon div:nth-child(2) {
+  -webkit-transform: rotate(0.4turn);
+  transform: rotate(0.4turn);
+}
+
+.mil-pentagon div:nth-child(3) {
+  -webkit-transform: rotate(0.6turn);
+  transform: rotate(0.6turn);
+}
+
+.mil-pentagon div:nth-child(4) {
+  -webkit-transform: rotate(0.8turn);
+  transform: rotate(0.8turn);
+}
+
+.mil-pentagon div:nth-child(5) {
+  -webkit-transform: rotate(1turn);
+  transform: rotate(1turn);
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
 }
